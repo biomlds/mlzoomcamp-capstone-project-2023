@@ -53,6 +53,5 @@ def create_pipeline(**kwargs) -> Pipeline:
                 outputs="X_train",
                 name="scale_X_train",
             ),
-            # node(func=print_text, inputs=["params:text"], outputs="test", name="print"),
         ]
     )
