@@ -36,25 +36,26 @@ Kedro framework was used to build the following pipeleines:
 docker-compose run ds kedro registry list
 ```
 
-
-- data_processing:
+- data_processing pipeline:
     - preprocess data 
     ```sh
     docker-compose run ds kedro run -p data_processing
     ```
-- data_science
+- data_science pipeline
     - train and optimize hyperparameters of linear regression, ridge regression and random forest model
     ```sh
     docker-compose run ds kedro run -p data_science
     ```
     Random forest is the best performing model based on RMSE score. Thus, it is used for inference.
-- inference
-    make prediction on user input
+    !['metrics'](metrics.png)
+- inference pipeline make prediction on user input being provided via the web app 
     ```sh
     docker-compose run ds kedro run -p inference
     ```
+  
+  
+Here is the directed acyclic graph of the pipelines nodes:
 
-- Here is the directed acyclic graph of the pipelines nodes.
 !['streamlit'](kedro_pipeline.png)
 
 ### Model deployment

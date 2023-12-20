@@ -14,25 +14,25 @@ label_encoder:
   type: pickle.PickleDataset
   filepath: data/05_model_input/label_encoder.pkl
 X_train:
-  type: pandas.ParquetDataset
-  filepath: data/03_primary/model_input_table.pq
-  # type: pickle.PickleDataset
-  # filepath: data/05_model_input/X_train.pkl
+  # type: pandas.ParquetDataset
+  # filepath: data/03_primary/model_input_table.pq
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/X_train.pkl
 X_test:
-  type: pandas.ParquetDataset
-  filepath: data/03_primary/model_input_table.pq
-  # type: pickle.PickleDataset
-  # filepath: data/05_model_input/X_test.pkl
+  # type: pandas.ParquetDataset
+  # filepath: data/03_primary/model_input_table.pq
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/X_test.pkl
 y_train:
-  type: pandas.ParquetDataset
-  filepath: data/03_primary/model_input_table.pq
-  # type: pickle.PickleDataset
-  # filepath: data/05_model_input/y_train.pkl
+  # type: pandas.ParquetDataset
+  # filepath: data/03_primary/model_input_table.pq
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/y_train.pkl
 y_test:
-  type: pandas.ParquetDataset
-  filepath: data/03_primary/model_input_table.pq
-  # type: pickle.PickleDataset
-  # filepath: data/05_model_input/y_test.pkl
+  # type: pandas.ParquetDataset
+  # filepath: data/03_primary/model_input_table.pq
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/y_test.pkl
 lin_regressor:
   type: pickle.PickleDataset
   filepath: data/06_models/lin_regressor.pkl

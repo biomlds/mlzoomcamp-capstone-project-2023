@@ -10,33 +10,7 @@ from kedro.framework.startup import bootstrap_project
 from pathlib import Path
 from yaml import dump
 
-# If you are creating a session outside of a Kedro project (i.e. not using
-# `kedro run` or `kedro jupyter`), you need to run `bootstrap_project` to
-# let Kedro find your configuration.
-
 KEDRO_PROJECT_PATH = "/home/kedro/us-insurance/"
-
-
-# session.run(pipeline_name="inference")
-
-# session = KedroSession.create()
-# context = session.load_context(Path("/home/kedro/us-insurance/"))
-
-# io = DataCatalog()
-# io.list()
-
-# import sklearn
-
-# config_loader = OmegaConfigLoader(conf_source="conf/base")
-# catalog_config = config_loader.get("catalog")
-# # Create a DataCatalog based on the configuration
-# data_catalog = DataCatalog.from_config(catalog_config)
-
-# st.title("US insurance charges prediction")
-
-# model = data_catalog.load("rf_regressor")
-
-# format_func = (lambda x: int(x),)
 
 st.write("## Insurance charges prediction")
 
