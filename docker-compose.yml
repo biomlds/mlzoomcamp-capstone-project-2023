@@ -12,7 +12,7 @@ services:
     tty: true
     environment:
       - JUPYTER_TOKEN=${ACCESS_TOKEN}
-    # command: /bin/bash -c "kedro jupyter notebook   --port=8888 --no-browser --ip='0.0.0.0' --allow-root --NotebookApp.token='${JUPYTER_TOKEN}' "
+    command: /bin/bash -c "kedro jupyter notebook   --port=8888 --no-browser --ip='0.0.0.0' --allow-root --NotebookApp.token='${JUPYTER_TOKEN}' "
 
   app:
     # image: dev

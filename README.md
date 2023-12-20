@@ -27,7 +27,7 @@ Technology stack:
 OR  
 start Jupyter notebook server and access it in the browser: http://localhost:8888/notebooks/notebooks/1_EDA.ipynb: 
 ```sh
-docker-compose run ds kedro jupyter notebook   --port=8888 --no-browser --ip='0.0.0.0' --allow-root --NotebookApp.token='${JUPYTER_TOKEN}'
+docker-compose up ds
 ```
     
 #### Kedro pipelines
