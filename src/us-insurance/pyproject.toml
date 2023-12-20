@@ -1,0 +1,35 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "us_insurance"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+us-insurance = "us_insurance.__main__:main"
+
+[tool.kedro]
+package_name = "us_insurance"
+project_name = "us-insurance"
+kedro_init_version = "0.19.1"
+tools = "['Linting', 'Data Structure', 'Kedro Viz']"
+
+[tool.ruff]
+line-length = 88
+show-fixes = true
+select = [ "F", "W", "E", "I", "UP", "PL", "T201",]
+ignore = [ "E501",]
+
+[project.entry-points."kedro.hooks"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "us_insurance.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false

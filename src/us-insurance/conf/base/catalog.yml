@@ -1,0 +1,75 @@
+insurance:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/insurance.csv
+
+insurnace_enc:
+  type: pickle.PickleDataset
+  filepath: data/02_intermediate/insurance_enc.pkl
+
+
+scaler:
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/scaler.pkl
+label_encoder:
+  type: pickle.PickleDataset
+  filepath: data/05_model_input/label_encoder.pkl
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_table.pq
+  # type: pickle.PickleDataset
+  # filepath: data/05_model_input/X_train.pkl
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_table.pq
+  # type: pickle.PickleDataset
+  # filepath: data/05_model_input/X_test.pkl
+y_train:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_table.pq
+  # type: pickle.PickleDataset
+  # filepath: data/05_model_input/y_train.pkl
+y_test:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_table.pq
+  # type: pickle.PickleDataset
+  # filepath: data/05_model_input/y_test.pkl
+lin_regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/lin_regressor.pkl
+  versioned: true
+ridge_regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/ridge_regressor.pkl
+  versioned: true
+rf_regressor:
+  type: pickle.PickleDataset
+  filepath: data/06_models/rf_regressor.pkl
+  versioned: true
+
+lr_metrics:
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/lr_metrics.json
+  versioned: true
+
+ridge_metrics:
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/ridge_metrics.json
+  versioned: true
+
+rf_metrics:
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/rf_metrics.json
+  versioned: true
+
+lin_regressor_best_params:
+  type: tracking.JSONDataset
+  filepath: data/09_tracking/lin_regressor_best_params.json
+
+ridge_regressor_best_params:
+  type: tracking.JSONDataset
+  filepath: data/09_tracking/ridge_regressor_best_params.json
+
+rf_regressor_best_params:
+  type: tracking.JSONDataset
+  filepath: data/09_tracking/rf_regressor_best_params.json
+

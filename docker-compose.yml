@@ -1,0 +1,29 @@
+services:
+  ds:
+    # image: ds
+    build: ./services/ds # command: npm start
+    container_name: ds
+    ports:
+      - 8888:8888
+      - 4141:4141
+    volumes:
+      - ./src/us-insurance:/home/kedro/us-insurance #:bind
+    working_dir: /home/kedro/us-insurance
+    tty: true
+    environment:
+      - JUPYTER_TOKEN=${ACCESS_TOKEN}
+    # command: /bin/bash -c "kedro jupyter notebook   --port=8888 --no-browser --ip='0.0.0.0' --allow-root --NotebookApp.token='${JUPYTER_TOKEN}' "
+
+  app:
+    # image: dev
+    build: ./services/ds # command: npm start
+    container_name: app
+    ports:
+      - 8501:8501
+    volumes:
+      - ./src/app:/home/kedro/app
+      - ./src/us-insurance/:/home/kedro/us-insurance
+      # - ./src/us-insurance/conf:/home/kedro/app/conf
+    tty: true
+    working_dir: /home/kedro/app
+    command: streamlit run app.py

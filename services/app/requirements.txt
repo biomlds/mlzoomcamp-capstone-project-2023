@@ -1,0 +1,5 @@
+streamlit
+kedro~=0.19.1
+kedro-viz
+kedro-datasets[pandas.CSVDataset, pandas.ExcelDataset, pandas.ParquetDataset, plotly.PlotlyDataset, plotly.JSONDataset, matplotlib.MatplotlibWriter]>=1.0
+scikit-learn~=1.0
